@@ -1,0 +1,42 @@
+
+
+plugins {
+    // Apply the java plugin to add support for Java
+    id 'java'
+	id 'application'
+    id 'war'
+    id 'org.gretty' version '2.2.0'
+}
+
+repositories {
+    // Use jcenter for resolving dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    jcenter()
+}
+
+gretty {
+  servletContainer = 'tomcat8'
+}
+
+dependencies {
+
+	providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+	testCompile 'javax.servlet:javax.servlet-api:3.1.0'
+	//testar a aplicação sem necessidade de executar o servidor
+	testCompile "org.mockito:mockito-core:2.+"
+    
+
+    // Use JUnit Jupiter Engine for testing.
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.4.2'
+    testCompileOnly 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+}
+
+application {
+    // Define the main class for the application
+    mainClassName = 'calculadoraDinamica.App'
+}
+
+test {
+    // Use junit platform for unit tests
+    useJUnitPlatform()
+}
