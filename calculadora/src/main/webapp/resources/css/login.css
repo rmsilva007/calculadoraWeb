@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:ghostwhite;
+}
+
+
+input[type=text], input[type=password] {
+  width: 24%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #ccc;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 24%;
+}
+
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: center;
+  padding-top: 16px;
+}
+
+
+
+  .content {
+    width: 100%;
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+
+
+}
